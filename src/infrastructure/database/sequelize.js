@@ -3,8 +3,8 @@ const config = require('../../config/config')[process.env.NODE_ENV || 'developme
 
 const sequelize = new Sequelize(config);
 
-const MarkingModel = require('./models/MarkingModel')(sequelize);
+const MarcacionModel = require('./models/MarcacionModel')(sequelize);
 
 sequelize.sync();
 
-module.exports = { sequelize, MarkingModel };
+module.exports = { sequelize, MarcacionModel };

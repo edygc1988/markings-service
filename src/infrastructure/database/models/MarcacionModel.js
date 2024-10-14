@@ -1,13 +1,16 @@
-// src/infrastructure/database/models/MarkingModel.js
+// src/infrastructure/database/models/MarcacionModel.js
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  const MarkingModel = sequelize.define('Marking',{
+  const MarcacionModel = sequelize.define('Marcacion',{
       id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
-      userId: { type: DataTypes.INTEGER, allowNull: false },
-      date: { type: DataTypes.DATE, allowNull: false },
-      type: { type: DataTypes.ENUM("entry", "exit"), allowNull: false },
-      location: { type: DataTypes.STRING },
+      usuarioId: { type: DataTypes.INTEGER, allowNull: false },
+      empleadoId: { type: DataTypes.INTEGER, allowNull: false },
+      fecha: { type: DataTypes.DATE, allowNull: false },
+      tipo: { type: DataTypes.ENUM("entry", "exit", "salidacomida", "entradacomida"), allowNull: false },
+      localizacion: { type: DataTypes.STRING },
+      empresaId: { type: DataTypes.INTEGER },
+      personaId: { type: DataTypes.INTEGER },
       createdBy: { type: DataTypes.STRING },
       updatedBy: { type: DataTypes.STRING },
       // Campos de auditoría
@@ -26,11 +29,11 @@ module.exports = (sequelize) => {
       },
     },
     {
-      tableName: "Marking",
+      tableName: "Marcacion",
       timestamps: true, // Añade automáticamente createdAt y updatedAt
       paranoid: true, // Añade automáticamente deletedAt para soft delete
     }
   );
 
-  return MarkingModel;
+  return MarcacionModel;
 };

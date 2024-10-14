@@ -4,7 +4,7 @@ version: '3.8'
 services:
   db:
     image: postgres:12
-    container_name: marking_db
+    container_name: marcacion_db
     environment:
       POSTGRES_USER: ${DB_USERNAME}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
@@ -14,7 +14,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  marking-service:
+  marcacion-service:
     build: .
     ports:
       - "3000:3000"
