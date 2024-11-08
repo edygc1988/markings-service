@@ -4,7 +4,7 @@ version: '3.8'
 services:
   db:
     image: postgres:12
-    container_name: marcacion_db
+    container_name: marking_db
     environment:
       POSTGRES_USER: ${DB_USERNAME}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
@@ -17,7 +17,7 @@ services:
   marcacion-service:
     build: .
     ports:
-      - "3000:3000"
+      - "3001:3000"
     environment:
       NODE_ENV: development
       DB_HOST: db

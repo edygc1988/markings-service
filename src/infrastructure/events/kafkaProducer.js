@@ -1,7 +1,7 @@
 const { Kafka } = require('kafkajs');
 
 const kafka = new Kafka({
-  clientId: 'marcacions-service',
+  clientId: 'marcacion-service',
   brokers: ['localhost:29092'], // Cambiado a 29092 para coincidir con el docker-compose
 });
 
