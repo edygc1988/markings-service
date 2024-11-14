@@ -7,3 +7,4 @@ const router = express.Router();
 router.post('/registrar', authMiddleware, registerController.registerMarking);
 
 module.exports = router;
+

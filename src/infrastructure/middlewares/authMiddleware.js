@@ -12,7 +12,7 @@ module.exports = async (req, res, next) => {
     //const rabbitMQPublisher = new RabbitMQPublisher();
     //await rabbitMQPublisher.publish({ correo: 'edygc1988@gmail.com', contraseña: '1234567890', token:  token });
     //console.log(data);
-    req.userId = decoded.id;
+    req.usuarioId = decoded.id;
     next();
   } catch (error) {
     res.status(401).json({ message: error + ' Not authorized' });

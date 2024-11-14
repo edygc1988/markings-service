@@ -14,7 +14,7 @@ exports.login = async (req, res) => {
 
     // Publicar mensaje a RabbitMQ
     //const rabbitMQPublisher = new RabbitMQPublisher();
-    //await rabbitMQPublisher.publish({ userId: usuario.id, nombre, correo, roles });
+    //await rabbitMQPublisher.publish({ usuarioId: usuario.id, nombre, correo, roles });
 
     res.status(201).json({ message: 'Usuario registrado exitosamente', usuario });
   } catch (error) {

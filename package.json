@@ -1,5 +1,5 @@
 {
-  "name": "markings-service",
+  "name": "marcacions-service",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,10 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "kafkajs": "^2.2.4",
-    "markings-service": "file:",
+    "marcacions-service": "file:",
     "pg": "^8.12.0",
     "pg-hstore": "^2.3.4",
+    "prom-client": "^15.1.3",
     "sequelize": "^6.37.3"
   },
   "devDependencies": {

@@ -14,10 +14,10 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  marking-service:
+  marcacion-service:
     build: .
     ports:
-      - "3000:3000"
+      - "3001:3000"
     environment:
       NODE_ENV: development
       DB_HOST: db
