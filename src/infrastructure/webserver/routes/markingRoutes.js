@@ -4,6 +4,6 @@ const authMiddleware = require('../../middlewares/authMiddleware');
 
 const router = express.Router();
 
-router.post('/markings', authMiddleware, registerController.registerMarking);
+router.post('/registrar', authMiddleware, registerController.registerMarking);
 
 module.exports = router;

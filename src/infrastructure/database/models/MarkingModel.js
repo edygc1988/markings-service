@@ -8,6 +8,8 @@ module.exports = (sequelize) => {
       date: { type: DataTypes.DATE, allowNull: false },
       type: { type: DataTypes.ENUM("entry", "exit"), allowNull: false },
       location: { type: DataTypes.STRING },
+      idEmpresa: { type: DataTypes.INTEGER },
+      idPersona: { type: DataTypes.INTEGER },
       createdBy: { type: DataTypes.STRING },
       updatedBy: { type: DataTypes.STRING },
       // Campos de auditoría
