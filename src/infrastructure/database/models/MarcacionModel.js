@@ -35,5 +35,13 @@ module.exports = (sequelize) => {
     }
   );
 
+  MarcacionModel.associate = (models) => {
+    // Relación con Empleado
+    MarcacionModel.belongsTo(models.Empleado, {
+      foreignKey: 'empleadoId',
+      as: 'empleado', // Relación con el empleado
+    });
+  };
+
   return MarcacionModel;
 };

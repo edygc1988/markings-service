@@ -4,7 +4,12 @@ const config = require('../../config/config')[process.env.NODE_ENV || 'developme
 const sequelize = new Sequelize(config);
 
 const MarcacionModel = require('./models/MarcacionModel')(sequelize);
+const EmpleadoModel = require('./models/empleadoModel')(sequelize);
 
-sequelize.sync();
+MarcacionModel.associate({ 
+    Empleado: EmpleadoModel // Asocia las marcaciones con el empleado
+  });
 
-module.exports = { sequelize, MarcacionModel };
+sequelize.sync({alter: true});
+
+module.exports = { sequelize, MarcacionModel, EmpleadoModel };
